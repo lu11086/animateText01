@@ -5,6 +5,7 @@ var firstRun = true;
 var myWidth = document.documentElement.clientWidth;
 var myHeight = 0.01 * document.documentElement.clientHeight;
 var mouseX, objX, isDowm = false;
+var mouseDisable = false;
 /*预加载图片*/
 imgLoader(['img/1-dd-1.png', 'img/1-dd-2.png', 'img/1-dd-3.png', 'img/1-img.png', 'img/1-text.png', 'img/2-dd-1.png', 'img/2-dd-2.png', 'img/2-dd-3.png', 'img/2-dd-4.png', 'img/2-text.png', 'img/bar.png', 'img/bg5-1.jpg', 'img/bg5-2.jpg', 'img/evening.png', 'img/morning.png', 'img/round.png', 'img/title.png', 'img/topBar.png', 'img/topBarBG.png'], function (percentage) {
     var percentT = percentage * 100;
@@ -25,65 +26,71 @@ imgLoader(['img/1-dd-1.png', 'img/1-dd-2.png', 'img/1-dd-3.png', 'img/1-img.png'
 
 /*鼠标拖动部分*/
 function mouseDown(obj, e) {
+    if(!mouseDisable){
     obj.style.cursor = "move";
     objX = myBarPoint.style.left;
     mouseX = e.clientX;
     isDowm = true;
+    }
 }
 
 function mouseMove(e) {
-    var x = e.clientX;
-    if (isDowm) {
-        var theResult = (parseInt(x) - parseInt(mouseX) + parseInt(objX));
-        if (theResult >= 0.5 * myWidth + 26.25 * myHeight) {
-            document.getElementById("myBarPoint").style.left = 0.5 * myWidth + 26.25 * myHeight + "px";
-        } else if (theResult <= 0.5 * myWidth - 31.75 * myHeight) {
-            document.getElementById("myBarPoint").style.left = 0.5 * myWidth - 31.75 * myHeight + "px";
-        } else {
-            document.getElementById("myBarPoint").style.left = theResult + "px";
+    if(!mouseDisable) {
+        var x = e.clientX;
+        if (isDowm) {
+            var theResult = (parseInt(x) - parseInt(mouseX) + parseInt(objX));
+            if (theResult >= 0.5 * myWidth + 26.25 * myHeight) {
+                document.getElementById("myBarPoint").style.left = 0.5 * myWidth + 26.25 * myHeight + "px";
+            } else if (theResult <= 0.5 * myWidth - 31.75 * myHeight) {
+                document.getElementById("myBarPoint").style.left = 0.5 * myWidth - 31.75 * myHeight + "px";
+            } else {
+                document.getElementById("myBarPoint").style.left = theResult + "px";
+            }
         }
     }
 }
 
 function mouseUp(e) {
-    var littleChar = 0.5 * myWidth - 16.75 * myHeight;
-    var bigChar = 0.5 * myWidth + 11.25 * myHeight;
-    if (isDowm) {
-        var x = e.clientX;
-        var theResult = (parseInt(x) - parseInt(mouseX) + parseInt(objX));
-        if (theResult >= 0.5 * myWidth + 26.25 * myHeight) {
-            document.getElementById("myBarPoint").style.left = 0.5 * myWidth + 26.25 * myHeight + "px";
-        } else if (theResult <= 0.5 * myWidth - 31.75 * myHeight) {
-            document.getElementById("myBarPoint").style.left = 0.5 * myWidth - 31.75 * myHeight + "px";
-        } else {
-            document.getElementById("myBarPoint").style.left = theResult + "px";
+    if(!mouseDisable) {
+        var littleChar = 0.5 * myWidth - 16.75 * myHeight;
+        var bigChar = 0.5 * myWidth + 11.25 * myHeight;
+        if (isDowm) {
+            var x = e.clientX;
+            var theResult = (parseInt(x) - parseInt(mouseX) + parseInt(objX));
+            if (theResult >= 0.5 * myWidth + 26.25 * myHeight) {
+                document.getElementById("myBarPoint").style.left = 0.5 * myWidth + 26.25 * myHeight + "px";
+            } else if (theResult <= 0.5 * myWidth - 31.75 * myHeight) {
+                document.getElementById("myBarPoint").style.left = 0.5 * myWidth - 31.75 * myHeight + "px";
+            } else {
+                document.getElementById("myBarPoint").style.left = theResult + "px";
+            }
+            mouseX = x;
+            myBarPoint.style.cursor = "pointer";
+            var myCha, str = '';
+            if (littleChar < theResult && theResult < bigChar) {
+                myCha = 0.5 * myWidth - 2.75 * myHeight - theResult;
+                returnMiddle();
+            } else if (theResult <= littleChar) {
+                myCha = 0.5 * myWidth - 31.75 * myHeight - theResult;
+                opwnMyLeftPage();
+            } else {
+                myCha = 0.5 * myWidth + 26.25 * myHeight - theResult;
+                opwnMyRightPage();
+            }
+            str += '@keyframes barPointMove {0% {transform: translate(0,0)} 100% {transform: translate(' + myCha + 'px,0)}}';
+            var style = document.createElement('style');
+            style.name = 'barPointMove';
+            style.innerHTML = str;
+            var myHead = document.getElementsByTagName('head').item(0);
+            myHead.appendChild(style);
+            document.getElementById("myBarPoint").setAttribute("class", "barPointMove-An");
+            setTimeout(function () {
+                document.getElementById("myBarPoint").removeAttribute("class");
+                document.getElementById("myBarPoint").style.left = myCha + theResult + 'px';
+                myHead.removeChild(myHead.lastChild);
+            }, 750);
+            isDowm = false;
         }
-        mouseX = x;
-        myBarPoint.style.cursor = "pointer";
-        var myCha, str = '';
-        if (littleChar < theResult && theResult < bigChar) {
-            myCha = 0.5 * myWidth - 2.75 * myHeight - theResult;
-            returnMiddle();
-        } else if (theResult <= littleChar) {
-            myCha = 0.5 * myWidth - 31.75 * myHeight - theResult;
-            opwnMyLeftPage();
-        } else {
-            myCha = 0.5 * myWidth + 26.25 * myHeight - theResult;
-            opwnMyRightPage();
-        }
-        str += '@keyframes barPointMove {0% {transform: translate(0,0)} 100% {transform: translate(' + myCha + 'px,0)}}';
-        var style = document.createElement('style');
-        style.name = 'barPointMove';
-        style.innerHTML = str;
-        var myHead = document.getElementsByTagName('head').item(0);
-        myHead.appendChild(style);
-        document.getElementById("myBarPoint").setAttribute("class", "barPointMove-An");
-        setTimeout(function () {
-            document.getElementById("myBarPoint").setAttribute("class", "");
-            document.getElementById("myBarPoint").style.left = myCha + theResult + 'px';
-            myHead.removeChild(myHead.lastChild);
-        }, 750);
-        isDowm = false;
     }
 }
 
@@ -130,6 +137,7 @@ function opwnMyLeftPage() {
     if (firstRun) {
         document.getElementById("myBarPoint").setAttribute("class", "barPointToLeft-An");
     }
+    mouseDisable = true;
     setTimeout(function () {
         var myleftBackground = document.querySelector(".leftBackground");
         //console.log(Math.round(myleftBackground.clientWidth)+":"+Math.round(0.5 * myWidth));
@@ -163,6 +171,9 @@ function opwnMyLeftPage() {
                     document.querySelector(".myLeftDom3").setAttribute("class", "myLeftDom3 fadeToLeft-An");
                     setTimeout(function () {
                         document.querySelector(".myLeftDom1").setAttribute("class", "myLeftDom1 fadeToLeftTop-An");
+                        setTimeout(function () {
+                            mouseDisable = false;
+                        },700);
 
                         if (firstRun) {
                             setTimeout(function () {
@@ -180,6 +191,7 @@ function opwnMyRightPage() {
     if (firstRun) {
         document.getElementById("myBarPoint").setAttribute("class", "barPointToRight-An");
     }
+    mouseDisable = true;
     setTimeout(function () {
         var myleftBackground = document.querySelector(".leftBackground");
         var myChar = Math.round(myleftBackground.clientWidth) - Math.round(0.5 * myWidth);
@@ -211,6 +223,9 @@ function opwnMyRightPage() {
                         document.querySelector(".myRightDom3").setAttribute("class", "myRightDom3 fadeToRight-An");
                         setTimeout(function () {
                             document.querySelector(".myRightDom4").setAttribute("class", "myRightDom4 fadeToRight-An");
+                            setTimeout(function () {
+                                mouseDisable = false;
+                            },700);
 
                             if (firstRun) {
                                 setTimeout(function () {
@@ -226,6 +241,7 @@ function opwnMyRightPage() {
 }
 
 function returnMiddle() {
+    mouseDisable = true;
     var myleftBackground = document.querySelector(".leftBackground");
     var myChar = Math.round(myleftBackground.clientWidth) - Math.round(0.5 * myWidth);
     if (myChar > 0) {
@@ -249,4 +265,7 @@ function returnMiddle() {
             document.getElementById("myBarPoint").setAttribute("class", "barPointRightToMiddle-An");
         }
     }
+    setTimeout(function () {
+        mouseDisable = false;
+    },700)
 }

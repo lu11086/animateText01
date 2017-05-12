@@ -97,7 +97,7 @@
     position: absolute;
     /*left: calc(50vw - 2.75vh);*/
     z-index: 5;
-    top:3.43vh;
+    top: 3.43vh;
     background: url("../img/round.png") no-repeat;
     background-size: 100%;
 }
