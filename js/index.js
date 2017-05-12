@@ -60,7 +60,6 @@ function mouseUp(e) {
         }
         mouseX = x;
         myBarPoint.style.cursor = "pointer";
-        //console.log(littleChar + ':' + theResult + ':' + bigChar);
         var myCha, str = '';
         if (littleChar < theResult && theResult < bigChar) {
             myCha = 0.5 * myWidth - 2.75 * myHeight - theResult;
