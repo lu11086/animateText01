@@ -52,8 +52,8 @@ function mouseMove(e) {
 
 function mouseUp(e) {
     if(!mouseDisable) {
-        var littleChar = 0.5 * myWidth - 16.75 * myHeight;
-        var bigChar = 0.5 * myWidth + 11.25 * myHeight;
+        var littleChar = 0.5 * myWidth - 13.75 * myHeight;
+        var bigChar = 0.5 * myWidth + 8.25 * myHeight;
         if (isDowm) {
             var x = e.clientX;
             var theResult = (parseInt(x) - parseInt(mouseX) + parseInt(objX));
