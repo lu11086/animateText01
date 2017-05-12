@@ -77,6 +77,8 @@
     margin: 0 auto;
     padding-top: 6vh;
     height: 24vh;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .myBarLine {
@@ -84,15 +86,20 @@
     margin: 0 auto;
     padding-top: 3.6vh;
     height: 5.16vh;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.myBarPoint {
+#myBarPoint {
     display: block;
     height: 5.5vh;
+    width: 5.5vh;
     position: absolute;
-    left: calc(50vw - 2.75vh);
+    /*left: calc(50vw - 2.75vh);*/
     z-index: 5;
-    padding-top: 3.43vh;
+    top:3.43vh;
+    background: url("../img/round.png") no-repeat;
+    background-size: 100%;
 }
 
 .myModel {
@@ -100,6 +107,8 @@
     height: 57.6vh;
     margin: 0 auto;
     padding-top: 2.88vh;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .myModelMorning {
@@ -114,6 +123,8 @@
     display: block;
     position: absolute;
     top: 45vh;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .myLeftText {

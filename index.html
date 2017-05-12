@@ -14,12 +14,12 @@
         <p class="myCoverSpanLine"></p>
     </div>
     <img src="img/topBar.png" alt="标题栏" class="myNavBar">
-    <div class="myContent hiddenMyDom">
+    <div class="myContent hiddenMyDom" onmouseup="mouseUp(event)" onmousemove="mouseMove(event)">
         <div class="myBackground leftBackground"></div>
         <div class="myBackground rightBackground"></div>
         <img src="img/title.png" alt="标题" class="myTitle">
         <div class="myBar hiddenMyDom">
-            <img src="img/round.png" alt="进度点" class="myBarPoint ">
+            <div id="myBarPoint" onmousedown="mouseDown(this,event)"></div>
             <img src="img/bar.png" alt="进度条" class="myBarLine">
         </div>
         <img src="img/1-img.png" alt="手表图" class="myModel">
