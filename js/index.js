@@ -142,13 +142,13 @@ function opwnMyLeftPage() {
         var myleftBackground = document.querySelector(".leftBackground");
         //console.log(Math.round(myleftBackground.clientWidth)+":"+Math.round(0.5 * myWidth));
         var myChar = Math.round(myleftBackground.clientWidth) - Math.round(0.5 * myWidth);
-        if (myChar < 0) {
+        if (myChar < 0 && !firstRun) {
             myleftBackground.setAttribute("class", "myBackground leftBackground fullTheScreenFromEmpty-An");
             document.querySelector(".myRightDom2").setAttribute("class", "myRightDom2 fadeOut-An");
             document.querySelector(".myRightDom1").setAttribute("class", "myRightDom1 fadeOut-An");
             document.querySelector(".myRightDom3").setAttribute("class", "myRightDom3 fadeOut-An");
             document.querySelector(".myRightDom4").setAttribute("class", "myRightDom4 fadeOut-An");
-        } else if (myChar == 0) {
+        } else if (myChar == 0 || firstRun) {
             myleftBackground.setAttribute("class", "myBackground leftBackground fullTheScreenFromMiddle-An");
         }
 
@@ -195,13 +195,13 @@ function opwnMyRightPage() {
     setTimeout(function () {
         var myleftBackground = document.querySelector(".leftBackground");
         var myChar = Math.round(myleftBackground.clientWidth) - Math.round(0.5 * myWidth);
-        if (myChar > 0) {
+        if (myChar > 0 || firstRun) {
             myleftBackground.setAttribute("class", "myBackground leftBackground emptyTheScreenFromFull-An");
             document.querySelector(".myLeftDom1").setAttribute("class", "myLeftDom1 fadeOut-An");
             document.querySelector(".myLeftDom2").setAttribute("class", "myLeftDom2 fadeOut-An");
             document.querySelector(".myLeftDom3").setAttribute("class", "myLeftDom3 fadeOut-An");
             document.querySelector(".myModelMorning").setAttribute("class", "myModelMorning fadeOut-An");
-        } else if (myChar == 0) {
+        } else if (myChar == 0 && !firstRun) {
             myleftBackground.setAttribute("class", "myBackground leftBackground emptyTheScreenFromMiddle-An");
         }
 
