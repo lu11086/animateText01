@@ -7,7 +7,7 @@ var myHeight = 0.01 * document.documentElement.clientHeight;
 var mouseX, objX, isDowm = false;
 var mouseDisable = false;
 /*预加载图片*/
-imgLoader(['img/1-dd-1.png', 'img/1-dd-2.png', 'img/1-dd-3.png', 'img/1-img.png', 'img/1-text.png', 'img/2-dd-1.png', 'img/2-dd-2.png', 'img/2-dd-3.png', 'img/2-dd-4.png', 'img/2-text.png', 'img/bar.png', 'img/bg5-1.jpg', 'img/bg5-2.jpg', 'img/evening.png', 'img/morning.png', 'img/round.png', 'img/title.png', 'img/topBar.png', 'img/topBarBG.png'], function (percentage) {
+imgLoader(['img/bg5-1.jpg', 'img/1-dd-1.png', 'img/1-dd-2.png', 'img/1-dd-3.png', 'img/1-img.png', 'img/1-text.png', 'img/2-dd-1.png', 'img/2-dd-2.png', 'img/2-dd-3.png', 'img/2-dd-4.png', 'img/2-text.png', 'img/bar.png', 'img/bg5-2.jpg', 'img/evening.png', 'img/morning.png', 'img/round.png', 'img/title.png', 'img/topBar.png', 'img/topBarBG.png'], function (percentage) {
     var percentT = percentage * 100;
     document.querySelector(".myCoverSpan").innerText = 'Loading ' + (parseInt(percentT)) + '%';
     document.querySelector(".myCoverSpanLine").style.width = percentT + '%';
@@ -26,16 +26,16 @@ imgLoader(['img/1-dd-1.png', 'img/1-dd-2.png', 'img/1-dd-3.png', 'img/1-img.png'
 
 /*鼠标拖动部分*/
 function mouseDown(obj, e) {
-    if(!mouseDisable){
-    obj.style.cursor = "move";
-    objX = myBarPoint.style.left;
-    mouseX = e.clientX;
-    isDowm = true;
+    if (!mouseDisable) {
+        obj.style.cursor = "move";
+        objX = myBarPoint.style.left;
+        mouseX = e.clientX;
+        isDowm = true;
     }
 }
 
 function mouseMove(e) {
-    if(!mouseDisable) {
+    if (!mouseDisable) {
         var x = e.clientX;
         if (isDowm) {
             var theResult = (parseInt(x) - parseInt(mouseX) + parseInt(objX));
@@ -51,7 +51,7 @@ function mouseMove(e) {
 }
 
 function mouseUp(e) {
-    if(!mouseDisable) {
+    if (!mouseDisable) {
         var littleChar = 0.5 * myWidth - 13.75 * myHeight;
         var bigChar = 0.5 * myWidth + 8.25 * myHeight;
         if (isDowm) {
@@ -174,7 +174,7 @@ function opwnMyLeftPage() {
                         document.querySelector(".myLeftDom1").setAttribute("class", "myLeftDom1 fadeToLeftTop-An");
                         setTimeout(function () {
                             mouseDisable = false;
-                        },700);
+                        }, 700);
 
                         if (firstRun) {
                             setTimeout(function () {
@@ -226,7 +226,7 @@ function opwnMyRightPage() {
                             document.querySelector(".myRightDom4").setAttribute("class", "myRightDom4 fadeToRight-An");
                             setTimeout(function () {
                                 mouseDisable = false;
-                            },700);
+                            }, 700);
 
                             if (firstRun) {
                                 setTimeout(function () {
@@ -268,5 +268,5 @@ function returnMiddle() {
     }
     setTimeout(function () {
         mouseDisable = false;
-    },700)
+    }, 700)
 }
