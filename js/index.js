@@ -123,6 +123,7 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) {
 
 function startMyPage() {
     document.querySelector(".myContent").setAttribute("class", "myContent slideUp-An");
+    document.querySelector(".myPage").setAttribute("class", "myPage fadeIn-An");
     setTimeout(function () {
         document.querySelector(".myBar").setAttribute("class", "myBar fangda-An");
         document.querySelector(".myLeftText").setAttribute("class", "myLeftText fadeToLeft-An");
