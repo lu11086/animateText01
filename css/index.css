@@ -1,0 +1,185 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+.myPage {
+    overflow: hidden;
+    height: 100vh;
+    background: url("../img/topBarBG.png") repeat-x;
+    background-size: 53vh auto;
+}
+
+.myNavBar {
+    height: 14vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.myBackground {
+    height: 86vh;
+    position: absolute;
+}
+
+.leftBackground {
+    z-index: -5;
+    width: 50%;
+    background: url("../img/bg5-1.jpg") no-repeat;
+    background-size: 100vw 86vh;
+}
+
+.rightBackground {
+    z-index: -10;
+    width: 100%;
+    background: url("../img/bg5-2.jpg") no-repeat;
+    background-size: 100vw 86vh;
+}
+
+.myCover {
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    position: absolute;
+    z-index: 15;
+    background: url("../img/bg5-1.jpg") no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.myCoverSpan {
+    display: block;
+    width: 100vw;
+    color: #fff;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.myCoverSpanLine {
+    display: block;
+    margin-top: 10vh;
+    height: 1vh;
+    background: #fff;
+    -webkit-animation: preloader_Line 1.5s infinite linear;
+    -moz-animation: preloader_Line 1.5s infinite linear;
+    -ms-animation: preloader_Line 1.5s infinite linear;
+    animation: preloader_Line 1.5s infinite linear;
+}
+
+.hiddenMyDom {
+    visibility: hidden;
+}
+
+.myContent {
+    position: relative;
+}
+
+.myTitle {
+    display: block;
+    margin: 0 auto;
+    padding-top: 6vh;
+    height: 24vh;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.myBarLine {
+    display: block;
+    margin: 0 auto;
+    padding-top: 3.6vh;
+    height: 5.16vh;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#myBarPoint {
+    display: block;
+    height: 5.5vh;
+    width: 5.5vh;
+    position: absolute;
+    /*left: calc(50vw - 2.75vh);*/
+    z-index: 5;
+    top: 3.43vh;
+    background: url("../img/round.png") no-repeat;
+    background-size: 100%;
+}
+
+.myModel {
+    display: block;
+    height: 57.6vh;
+    margin: 0 auto;
+    padding-top: 2.88vh;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.myModelMorning {
+    position: absolute;
+    z-index: 5;
+    top: 71vh;
+    left: calc(50vw + 15vh);
+    height: 3vh;
+}
+
+.myLeftText, .myRightText {
+    display: block;
+    position: absolute;
+    top: 45vh;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.myLeftText {
+    height: 30vh;
+    left: calc(50vw - 65vh);
+}
+
+.myRightText {
+    height: 29vh;
+    left: calc(50vw + 40vh);
+}
+
+.myLeftDom1, .myLeftDom2, .myLeftDom3, .myRightDom1, .myRightDom2, .myRightDom3, .myRightDom4 {
+    position: absolute;
+    z-index: -5;
+}
+
+.myLeftDom1 {
+    top: 40vh;
+    height: 25vh;
+    left: calc(50vw - 25vh);
+}
+
+.myLeftDom2 {
+    top: 45vh;
+    height: 30vh;
+    left: calc(50vw - 10vh);
+}
+
+.myLeftDom3 {
+    top: 50vh;
+    height: 20vh;
+    left: calc(50vw - 25vh);
+}
+
+.myRightDom1 {
+    top: 50vh;
+    height: 24vh;
+    left: calc(50vw - 13vh);
+}
+
+.myRightDom2 {
+    top: 50vh;
+    height: 30vh;
+    left: 50vw;
+}
+
+.myRightDom3 {
+    top: 45vh;
+    height: 19vh;
+    left: calc(50vw + 21vh);
+}
+
+.myRightDom4 {
+    top: 47vh;
+    height: 15vh;
+    left: calc(50vw + 30vh);
+}

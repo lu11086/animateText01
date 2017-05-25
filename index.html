@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑屏动画测试</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/preload.css">
+</head>
+<body>
+<div class="myCover">
+    <div id="preloader5"></div>
+    <span class="myCoverSpan"></span>
+    <p class="myCoverSpanLine"></p>
+</div>
+<div class="myPage hiddenMyDom">
+    <img src="img/topBar.png" alt="标题栏" class="myNavBar">
+    <div class="myContent hiddenMyDom" onmouseup="mouseUp(event)" onmousemove="mouseMove(event)">
+        <div class="myBackground leftBackground"></div>
+        <div class="myBackground rightBackground"></div>
+        <img src="img/title.png" alt="标题" class="myTitle">
+        <div class="myBar hiddenMyDom">
+            <div id="myBarPoint" onmousedown="mouseDown(this,event)"></div>
+            <img src="img/bar.png" alt="进度条" class="myBarLine">
+        </div>
+        <img src="img/1-img.png" alt="手表图" class="myModel">
+        <img src="img/morning.png" alt="morning标注" class="myModelMorning hiddenMyDom">
+        <img src="img/1-text.png" alt="左边标注" class="myLeftText hiddenMyDom">
+        <img src="img/1-dd-1.png" alt="小图1" class="myLeftDom1 hiddenMyDom">
+        <img src="img/1-dd-2.png" alt="小图2" class="myLeftDom2 hiddenMyDom">
+        <img src="img/1-dd-3.png" alt="小图3" class="myLeftDom3 hiddenMyDom">
+        <img src="img/2-text.png" alt="右边标注" class="myRightText hiddenMyDom">
+        <img src="img/2-dd-4.png" alt="小图4" class="myRightDom4 hiddenMyDom">
+        <img src="img/2-dd-3.png" alt="小图3" class="myRightDom3 hiddenMyDom">
+        <img src="img/2-dd-1.png" alt="小图1" class="myRightDom1 hiddenMyDom">
+        <img src="img/2-dd-2.png" alt="小图2" class="myRightDom2 hiddenMyDom">
+    </div>
+</div>
+</body>
+<script src="js/imgLoaded.js"></script>
+<script src="js/index.js"></script>
+</html>

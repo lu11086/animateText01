@@ -1,0 +1,507 @@
+#preloader5{
+    position:relative;
+    width:30px;
+    height:30px;
+    background:#3498db;
+    border-radius:50px;
+    top:20vh;
+    margin:0 auto;
+    -webkit-animation: preloader_5 1.5s infinite linear;
+    -moz-animation: preloader_5 1.5s infinite linear;
+    -ms-animation: preloader_5 1.5s infinite linear;
+    animation: preloader_5 1.5s infinite linear;
+}
+#preloader5:after{
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-top:10px solid #9b59b6;
+    border-bottom:10px solid #9b59b6;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-radius:50px;
+    content:'';
+    top:-20px;
+    left:-20px;
+    -webkit-animation: preloader_5_after 1.5s infinite linear;
+    -moz-animation: preloader_5_after 1.5s infinite linear;
+    -ms-animation: preloader_5_after 1.5s infinite linear;
+    animation: preloader_5_after 1.5s infinite linear;
+}
+
+
+@-webkit-keyframes preloader_5 {
+    0% {-webkit-transform: rotate(0deg);}
+    50% {-webkit-transform: rotate(180deg);background:#2ecc71;}
+    100% {-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes preloader_5_after {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+
+@-moz-keyframes preloader_5 {
+    0% {-moz-transform: rotate(0deg);}
+    50% {-moz-transform: rotate(180deg);background:#2ecc71;}
+    100% {-moz-transform: rotate(360deg);}
+}
+@-moz-keyframes preloader_5_after {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+@-ms-keyframes preloader_5 {
+    0% {-ms-transform: rotate(0deg);}
+    50% {-ms-transform: rotate(180deg);background:#2ecc71;}
+    100% {-ms-transform: rotate(360deg);}
+}
+@-ms-keyframes preloader_5_after {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+@keyframes preloader_5 {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);background:#2ecc71;}
+    100% {transform: rotate(360deg);}
+}
+@keyframes preloader_5_after {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+
+@-webkit-keyframes preloader_Line {
+    0% {background: #9b59b6}
+    50% {background: #3498db}
+    100% {background: #9b59b6}
+}
+
+
+@-moz-keyframes preloader_Line {
+    0% {background: #9b59b6}
+    50% {background: #3498db}
+    100% {background: #9b59b6}
+}
+
+@-ms-keyframes preloader_Line {
+    0% {background: #9b59b6}
+    50% {background: #3498db}
+    100% {background: #9b59b6}
+}
+
+@keyframes preloader_Line {
+    0% {background: #9b59b6}
+    50% {background: #3498db}
+    100% {background: #9b59b6}
+}
+
+
+.fadeIn-An{
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.fadeOut-An{
+    -webkit-animation: fadeOut .5s;
+    animation: fadeOut .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+
+
+.slideUp-An{
+    -webkit-animation: slideUp .5s;
+    animation: slideUp .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slideUp {
+    0% {top: 100vh;}
+    100% {top: 0;}
+}
+
+@keyframes slideUp {
+    0% {top: 100vh}
+    100% {top: 0}
+}
+
+
+.fangda-An{
+    -webkit-animation: fangda .5s;
+    animation: fangda .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fangda {
+    0% {transform: scale(0,0);}
+    100% {transform: scale(1,1);}
+}
+
+@keyframes fangda {
+    0% {transform: scale(0,0);}
+    100% {transform: scale(1,1);}
+}
+
+
+.fadeToLeft-An{
+    -webkit-animation: fadeToLeft .5s;
+    animation: fadeToLeft .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeToLeft {
+    0% {transform: translate(20vh,0);opacity: 0;}
+    100% {transform: translate(0,0);opacity: 1;}
+}
+
+@keyframes fadeToLeft {
+    0% {transform: translate(20vh,0);opacity: 0;}
+    100% {transform: translate(0,0);opacity: 1;}
+}
+
+
+.fadeToRight-An{
+    -webkit-animation: fadeToRight .5s;
+    animation: fadeToRight .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeToRight {
+    0% {transform: translate(-20vh,0);opacity: 0;}
+    100% {transform: translate(0,0);opacity: 1;}
+}
+
+@keyframes fadeToRight {
+    0% {transform: translate(-20vh,0);opacity: 0;}
+    100% {transform: translate(0,0);opacity: 1;}
+}
+
+/*可控点相关动画*/
+.barPointToLeft-An{
+    -webkit-animation: barPointToLeft .7s;
+    animation: barPointToLeft .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes barPointToLeft {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+@keyframes barPointToLeft {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+
+.barPointToRight-An{
+    -webkit-animation: barPointToRight .7s;
+    animation: barPointToRight .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes barPointToRight {
+    0% {transform: translate(-29vh,0);}
+    100% {transform: translate(29vh,0);}
+}
+
+@keyframes barPointToRight {
+    0% {transform: translate(-29vh,0);}
+    100% {transform: translate(29vh,0);}
+}
+
+.barPointRightToMiddle-An{
+    -webkit-animation: barPointRightToMiddle .7s;
+    animation: barPointRightToMiddle .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes barPointRightToMiddle {
+    0% {transform: translate(29vh,0);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes barPointRightToMiddle {
+    0% {transform: translate(29vh,0);}
+    100% {transform: translate(0,0);}
+}
+
+.barPointMove-An{
+    -webkit-animation: barPointMove .7s;
+    animation: barPointMove .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/*@-webkit-keyframes barPointMove {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+@keyframes barPointMove {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-29vh,0);}
+}*/
+
+
+
+/*左部背景动画*/
+.fullTheScreenFromMiddle-An{
+    -webkit-animation: fullTheScreenFromMiddle .7s;
+    animation: fullTheScreenFromMiddle .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fullTheScreenFromMiddle {
+    0% {width: 50vw;}
+    100% {width: 100vw;}
+}
+
+@keyframes fullTheScreenFromMiddle {
+    0% {width: 50vw;}
+    100% {width: 100vw;}
+}
+
+.fullTheScreenFromEmpty-An{
+    -webkit-animation: fullTheScreenFromEmpty .7s;
+    animation: fullTheScreenFromEmpty .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fullTheScreenFromEmpty {
+    0% {width: 0;}
+    100% {width: 100vw;}
+}
+
+@keyframes fullTheScreenFromEmpty {
+    0% {width: 0;}
+    100% {width: 100vw;}
+}
+
+
+.emptyTheScreenFromFull-An{
+    -webkit-animation: emptyTheScreenFromFull .7s;
+    animation: emptyTheScreenFromFull .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes emptyTheScreenFromFull {
+    0% {width: 100vw;}
+    100% {width: 0;}
+}
+
+@keyframes emptyTheScreenFromFull {
+    0% {width: 100vw;}
+    100% {width: 0;}
+}
+
+.emptyTheScreenFromMiddle-An{
+    -webkit-animation: emptyTheScreenFromMiddle .7s;
+    animation: emptyTheScreenFromMiddle .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes emptyTheScreenFromMiddle {
+    0% {width: 50vw;}
+    100% {width: 0;}
+}
+
+@keyframes emptyTheScreenFromMiddle {
+    0% {width: 50vw;}
+    100% {width: 0;}
+}
+
+.middleTheScreenFromFull-An{
+     -webkit-animation: middleTheScreenFromFull .7s;
+     animation: middleTheScreenFromFull .7s;
+     -webkit-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+ }
+
+@-webkit-keyframes middleTheScreenFromFull {
+    0% {width: 100vw;}
+    100% {width: 50vw;}
+}
+
+@keyframes middleTheScreenFromFull {
+    0% {width: 100vw;}
+    100% {width: 50vw;}
+}
+
+.middleTheScreenFromEmpty-An{
+    -webkit-animation: middleTheScreenFromEmpty .7s;
+    animation: middleTheScreenFromEmpty .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes middleTheScreenFromEmpty {
+    0% {width: 0;}
+    100% {width: 50vw;}
+}
+
+@keyframes middleTheScreenFromEmpty {
+    0% {width: 0;}
+    100% {width: 50vw;}
+}
+
+/*开启动画系列*/
+.watchToRight-An{
+    -webkit-animation: watchToRight .5s;
+    animation: watchToRight .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes watchToRight {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(29vh,0);}
+}
+
+@keyframes watchToRight {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(29vh,0);}
+}
+
+.watchLeftToRight-An{
+    -webkit-animation: watchLeftToRight .5s;
+    animation: watchLeftToRight .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes watchLeftToRight {
+    0% {transform: translate(-29vh,0);}
+    100% {transform: translate(29vh,0);}
+}
+
+@keyframes watchLeftToRight {
+    0% {transform: translate(-29vh,0);}
+    100% {transform: translate(29vh,0);}
+}
+
+.watchToLeft-An{
+    -webkit-animation: watchToLeft .5s;
+    animation: watchToLeft .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes watchToLeft {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+@keyframes watchToLeft {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+.watchRightToLeft-An{
+    -webkit-animation: watchRightToLeft .5s;
+    animation: watchRightToLeft .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes watchRightToLeft {
+    0% {transform: translate(29vh,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+@keyframes watchRightToLeft {
+    0% {transform: translate(29vh,0);}
+    100% {transform: translate(-29vh,0);}
+}
+
+.watchRightToMiddle-An{
+    -webkit-animation: watchRightToMiddle .7s;
+    animation: watchRightToMiddle .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes watchRightToMiddle {
+    0% {transform: translate(29vh,0);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes watchRightToMiddle {
+    0% {transform: translate(29vh,0);}
+    100% {transform: translate(0,0);}
+}
+
+.watchLeftToMiddle-An{
+    -webkit-animation: watchLeftToMiddle .7s;
+    animation: watchLeftToMiddle .7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes watchLeftToMiddle {
+    0% {transform: translate(-29vh,0);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes watchLeftToMiddle {
+    0% {transform: translate(-29vh,0);}
+    100% {transform: translate(0,0);}
+}
+
+
+
+.fadeToLeftTop-An{
+    -webkit-animation: fadeToLeftTop .5s;
+    animation: fadeToLeftTop .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeToLeftTop {
+    0% {transform: translate(20vh,10vh);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes fadeToLeftTop {
+    0% {transform: translate(20vh,10vh);}
+    100% {transform: translate(0,0);}
+}
